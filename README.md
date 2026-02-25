@@ -35,30 +35,31 @@ Install the required packages using:
 ```
 pip install torch torchvision transformers scikit-learn seaborn matplotlib
 ```
-#Dataset Structure 
+
+# Dataset Structure 
 Place the following in the project root:
 - CVPR_2026_dataset_Train
 - CVPR_2026_dataset_Val
 - CVPR_2026_dataset_Test
 
-#Usage 
+# Usage 
 1. Update Dataset Paths: Modify the dataset paths in group4_assignment2_final.ipynb to point to your local or remote dataset location.
 2. Run the Script: Execute the following command to start the training and evaluation process: python group4_assignment2_final.ipynb The script automatically detects and utilizes GPU, MPS (for Apple Silicon), or CPU based on availability.
 
-#Model Details 
+# Model Details 
 - Image Features: ResNet50
 - Text Features: DistilBERT 
 - Fusion Layers: Custom fully connected layers fuse a 512-dimensional image representation with a 512-dimensional text representation for final classification.
 - Training: Uses the AdamW optimizer (learning rate = , weight decay = ) over  epochs.
 - Evaluation: Computes overall accuracy, per-class accuracy, and displays a confusion matrix.
 
-#Running on TALC
+# Running on TALC
 1. Transfer Files: Copy group6_assignment2_final.py (Not ipynb) to TALC.
 2. Update Dataset Path: In group6_assignment2_final.py, update the dataset path to: /work/TALC/enel645_2026w/garbage_data
 3. Create SLURM Job Files: Prepare a .slurm file to run group6_assignment2_final.py.
 4. Execute: Run the job to train the model and generate results with final_resnet_adamW_model.pth.
 
-#Results
+# Results
 After training and evaluation on the test set, the model achieved an overall accuracy of approximately %. Detailed per-class performance is as follows:
 
 - Black: %
@@ -66,7 +67,7 @@ After training and evaluation on the test set, the model achieved an overall acc
 - Green: %
 - Other:
 
-#Comparision with other Models 
+# Comparision with other Models 
 1. Single vs Multi-model garbage system (Image or text model only)
 2. ResNet50 vs MobileNetV2
   

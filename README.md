@@ -59,6 +59,7 @@ Place the following in the project root:
 3. Create SLURM Job Files: Prepare a .slurm file to run group6_assignment2_final.py.
 4. Execute: Run the job to train the model and generate results with final_resnet_adamW_model.pth.
 
+
 # Results
 After training and evaluation on the test set, the model achieved an overall accuracy of approximately 80.7%. Detailed per-class performance is as follows:
 
